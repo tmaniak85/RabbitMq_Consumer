@@ -3,7 +3,7 @@ package com.course.rabbitmq.consumer.consumer;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Service;
 
-@Service
+//@Service
 public class HelloRabbitMqConsumer {
 
     @RabbitListener(queues = "course.hello")
