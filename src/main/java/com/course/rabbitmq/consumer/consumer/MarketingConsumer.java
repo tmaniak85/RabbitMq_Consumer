@@ -9,18 +9,18 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-//@Service
-public class EmployeeJsonConsumer {
+@Service
+public class MarketingConsumer {
 
     private static final Logger LOG = LoggerFactory.getLogger(EmployeeJsonConsumer.class);
 
     @Autowired
     private ObjectMapper objectMapper;
 
-    @RabbitListener(queues = "course.employee")
+    @RabbitListener(queues = "q.hr.marketing")
     public void listen(String message) throws JsonProcessingException {
         var emp = objectMapper.readValue(message, Employee.class);
 
-        LOG.info("Employee is {}", emp);
+        LOG.info("On marketing: {}", emp);
     }
 }
