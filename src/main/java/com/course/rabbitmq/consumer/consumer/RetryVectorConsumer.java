@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.rabbitmq.client.Channel;
 import org.springframework.stereotype.Service;
 
-@Service
+//@Service
 public class RetryVectorConsumer {
 
 	private static final String DEAD_EXCHANGE_NAME = "x.guideline.dead";
