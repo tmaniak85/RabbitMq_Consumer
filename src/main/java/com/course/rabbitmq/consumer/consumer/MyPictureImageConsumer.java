@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 
-@Service
+//@Service
 public class MyPictureImageConsumer {
 
     private static final Logger LOG = LoggerFactory.getLogger(EmployeeJsonConsumer.class);
