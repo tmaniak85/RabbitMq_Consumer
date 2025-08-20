@@ -1,9 +1,14 @@
 spring:
   rabbitmq:
-    host: albatross.rmq.cloudamqp.com
-    username: oiqqbrgy
-    virtual-host: oiqqbrgy
-    password: erxoRCkPJqHaXiXiVPovkiOPclyLr9dS
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
     listener:
       simple:
-        acknowledge-mode: manual
+        retry:
+          enabled: true
+          initial-interval: 3s
+          max-interval: 10s
+          max-attempts: 5
+          multiplier: 2
